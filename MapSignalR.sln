@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapSignalR", "MapSignalR\MapSignalR.csproj", "{375876CB-B23B-4D31-8154-8CF0BD00ECAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHost", "ConsoleHost\ConsoleHost.csproj", "{8578AA12-9FA9-4BCA-912C-906FA9621504}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viewer", "Viewer\Viewer.csproj", "{DAE1AE98-0951-494B-B5B1-E08ABB2CA0C1}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{375876CB-B23B-4D31-8154-8CF0BD00ECAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{375876CB-B23B-4D31-8154-8CF0BD00ECAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{375876CB-B23B-4D31-8154-8CF0BD00ECAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{375876CB-B23B-4D31-8154-8CF0BD00ECAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8578AA12-9FA9-4BCA-912C-906FA9621504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8578AA12-9FA9-4BCA-912C-906FA9621504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8578AA12-9FA9-4BCA-912C-906FA9621504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8578AA12-9FA9-4BCA-912C-906FA9621504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE1AE98-0951-494B-B5B1-E08ABB2CA0C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE1AE98-0951-494B-B5B1-E08ABB2CA0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE1AE98-0951-494B-B5B1-E08ABB2CA0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE1AE98-0951-494B-B5B1-E08ABB2CA0C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
