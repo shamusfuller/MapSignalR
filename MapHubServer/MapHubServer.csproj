@@ -356,7 +356,8 @@
     <Content Include="Cesium\Workers\sanitizeHtml.js" />
     <Content Include="Cesium\Workers\transferTypedArrayTest.js" />
     <Content Include="Cesium\Workers\upsampleQuantizedTerrainMesh.js" />
-    <Content Include="map.html" />
+    <Content Include="index.html" />
+    <Content Include="cesium.html" />
     <Content Include="packages.config" />
     <Content Include="Cesium\Assets\IAU2006_XYS\IAU2006_XYS_0.json" />
     <Content Include="Cesium\Assets\IAU2006_XYS\IAU2006_XYS_1.json" />
