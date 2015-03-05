@@ -345,7 +345,6 @@
     <Content Include="Cesium\Workers\sanitizeHtml.js" />
     <Content Include="Cesium\Workers\transferTypedArrayTest.js" />
     <Content Include="Cesium\Workers\upsampleQuantizedTerrainMesh.js" />
-    <Content Include="Default.html" />
     <Content Include="map.html" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
