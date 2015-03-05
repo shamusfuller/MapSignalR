@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace MapSignalR
 {
-    public class MapHub: Hub
+    public class MapHub : Hub
     {
         public async Task Test()
         {
-            //await Task.Delay(0);
-            await Clients.All.test(); // this call has different signature than this.Test
+            await Clients.All.test();
+        }
+        public async Task LoadLayer(Layer layer)
+        {
+            await Clients.All.loadLayer(layer); 
         }
     }
 }
