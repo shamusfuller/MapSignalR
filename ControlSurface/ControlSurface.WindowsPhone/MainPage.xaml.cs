@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MapSignalR;
+using Microsoft.AspNet.SignalR.Client;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,11 +24,19 @@ namespace ControlSurface
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        HubConnection hubConnection = new HubConnection("http://localhost:3443/");
+        IHubProxy hubProxy;
+
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            hubProxy = hubConnection.CreateHubProxy("MapHub");
+            hubConnection.Start().Wait();
+            viewer.Navigate(new Uri("http://localhost:3443/cesium.html"));
+
         }
 
         /// <summary>
@@ -43,6 +53,23 @@ namespace ControlSurface
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+        }
+
+        private async void load_Click(object sender, RoutedEventArgs e)
+        {
+            Layer layer = new Layer
+            {
+                Credit = "U. S. Geological Survey",
+                Format = "image/jpeg",
+                MaximumLevel = "19",
+                Name = "USGSShadedReliefOnly",
+                Style = "default",
+                TileMatrixLabels = null,
+                TileMatrixSetID = "default028mm",
+                Url = "http://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/WMTS/"
+            };
+            await hubProxy.Invoke("LoadLayer", layer);
+
         }
     }
 }
