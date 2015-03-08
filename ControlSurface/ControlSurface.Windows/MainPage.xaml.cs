@@ -32,7 +32,7 @@ namespace ControlSurface
             this.InitializeComponent();
             hubProxy = hubConnection.CreateHubProxy("MapHub");
             hubConnection.Start().Wait();
-            viewer.Navigate(new Uri("http://localhost:3443/cesium.html"));
+            viewer.Navigate(new Uri("http://localhost:3443/geoBrowser.html"));
         }
 
         private async void load_Click(object sender, RoutedEventArgs e)

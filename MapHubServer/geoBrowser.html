@@ -29,8 +29,36 @@
     <!--<p>Content goes here</p>-->
     <div id="cesiumContainer"></div>
     <script type="text/javascript">
-        var viewer = new Cesium.Viewer('cesiumContainer');
+        //var viewer = new Cesium.Viewer('cesiumContainer');
+        var viewer = new Cesium.Viewer('cesiumContainer', {
+            sceneMode: Cesium.SceneMode.SCENE2D
+        });
         var scene = viewer.scene
+        scene.screenSpaceCameraController.enableRotate = false;
+        scene.screenSpaceCameraController.enableTilt = false;
+
+        var morphCompleteHandler = function () {
+            if (scene.mode == 2) {
+                // disable the default event handlers
+                scene.screenSpaceCameraController.enableRotate = false;
+                //scene.screenSpaceCameraController.enableTranslate = false;
+                //scene.screenSpaceCameraController.enableZoom = false;
+                scene.screenSpaceCameraController.enableTilt = false;
+                //scene.screenSpaceCameraController.enableLook = false;
+            } else {
+                // enable the default event handlers
+                scene.screenSpaceCameraController.enableRotate = true;
+                //scene.screenSpaceCameraController.enableTranslate = false;
+                //scene.screenSpaceCameraController.enableZoom = false;
+                scene.screenSpaceCameraController.enableTilt = true;
+                //scene.screenSpaceCameraController.enableLook = false;
+            }
+        };
+
+        scene.morphComplete.addEventListener(morphCompleteHandler, scene);
+        //// this works 
+        //scene.morphTo2D();
+
 
         //Set the hubs URL for the connection
         //$.connection.hub.url = "http://localhost:8080/signalr";

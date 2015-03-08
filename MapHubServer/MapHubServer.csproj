@@ -104,6 +104,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="geoBrowser.html" />
     <Content Include="Cesium\Assets\Textures\maki\airfield.png" />
     <Content Include="Cesium\Assets\Textures\maki\airport.png" />
     <Content Include="Cesium\Assets\Textures\maki\alcohol-shop.png" />
